@@ -14,3 +14,13 @@
 | `<leader>bd` | バッファを閉じる |
 | `<leader>bD` | 他のバッファを全て閉じる |
 | `<leader>b1` 〜 `<leader>b9` | バッファ番号で直接ジャンプ |
+
+## ファイル操作
+
+| キー | 動作 |
+|------|------|
+| `<leader>ff` | ファイル検索 (telescope) |
+| `<leader>fg` | git管理ファイルの検索 (telescope) |
+| `<leader>fr` | 最近開いたファイル |
+| `<leader>/` | grep検索 |
+| `<leader>e` | ファイルツリー (neo-tree) |
