@@ -20,8 +20,7 @@ return {
     auto_expand_width = false, -- 自動幅拡張を無効化（チカチカ防止）
     window = {
       mappings = {
-        ["e"] = "noop", -- toggle_auto_expand_width を無効化
-        ["W"] = function()
+        ["e"] = function()
           local win = vim.api.nvim_get_current_win()
           local width = vim.api.nvim_win_get_width(win)
           if width < 60 then
