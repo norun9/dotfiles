@@ -39,6 +39,7 @@ return {
     filesystem = {
       follow_current_file = { enabled = false },
       use_libuv_file_watcher = false,
+      async_directory_scan = "never",
     },
   },
   },
