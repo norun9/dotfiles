@@ -7,5 +7,9 @@ return {
         ["e"] = "noop", -- toggle_auto_expand_width を無効化
       },
     },
+    filesystem = {
+      follow_current_file = { enabled = false }, -- バッファ切替時の自動更新を無効化
+      use_libuv_file_watcher = false, -- ファイルシステム監視を無効化
+    },
   },
 }
