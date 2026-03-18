@@ -5,6 +5,15 @@ return {
     window = {
       mappings = {
         ["e"] = "noop", -- toggle_auto_expand_width を無効化
+        ["W"] = function()
+          local win = vim.api.nvim_get_current_win()
+          local width = vim.api.nvim_win_get_width(win)
+          if width < 60 then
+            vim.api.nvim_win_set_width(win, 60)
+          else
+            vim.api.nvim_win_set_width(win, 30)
+          end
+        end,
       },
     },
     filesystem = {
