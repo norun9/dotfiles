@@ -17,23 +17,10 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
   opts = {
-    auto_expand_width = false, -- 自動幅拡張を無効化（チカチカ防止）
     window = {
+      auto_expand_width = false, -- 自動幅拡張を無効化（チカチカ防止）
       mappings = {
-        ["e"] = function(state)
-          local win = vim.api.nvim_get_current_win()
-          local default_width = 30
-          local node = state.tree:get_node()
-          if node then
-            local name_len = #node.name + 6 -- indent等のオフセット
-            local cur_width = vim.api.nvim_win_get_width(win)
-            if cur_width <= default_width then
-              vim.api.nvim_win_set_width(win, math.max(name_len, default_width))
-            else
-              vim.api.nvim_win_set_width(win, default_width)
-            end
-          end
-        end,
+        ["e"] = "noop",
       },
     },
     filesystem = {
