@@ -41,6 +41,16 @@ return {
       use_libuv_file_watcher = false,
       async_directory_scan = "never",
     },
+    event_handlers = {
+      {
+        event = "neo_tree_buffer_enter",
+        handler = function()
+          vim.opt_local.number = false
+          vim.opt_local.relativenumber = false
+          vim.opt_local.signcolumn = "no"
+        end,
+      },
+    },
   },
   },
 }
